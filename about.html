@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Coffee House</title>
+    <link rel="stylesheet" href="assests/css/styles.css"> <!-- Link to your CSS file -->
+    <style>
+        /*===== ABOUT SECTION =====*/
+        #about-us {
+            max-width: 1024px;
+            margin: 2rem auto; /* Center the About Us section */
+            padding: 1rem;
+            display: grid; /* Use grid layout */
+            grid-template-columns: 1fr 1fr; /* Two equal columns */
+            gap: 2rem; /* Gap between columns */
+        }
+
+        .about__img img {
+            width: 100%; /* Responsive image */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 0.5rem; /* Rounded corners for the image */
+        }
+
+        .about__content {
+            color: var(--first-color); /* Beige for text color */
+        }
+
+        .about__content h2 {
+            font-size: 2.5rem; /* Adjust as needed */
+            margin-bottom: 1rem;
+        }
+
+        .about__content p {
+            margin-bottom: 1rem;
+        }
+
+        /*===== MEDIA QUERIES =====*/
+        @media screen and (max-width: 768px) {
+            #about-us {
+                grid-template-columns: 1fr; /* Stack columns on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#" class="nav__logo">Coffee House </a>
+            </div>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+            <div class="nav__menu" id="nav-menu">
+                <div class="nav__close" id="nav-close">
+                    <i class='bx bx-x'></i>
+                </div>
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Blog</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+</body>
+</html>
