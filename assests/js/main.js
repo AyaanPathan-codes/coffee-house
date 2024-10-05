@@ -26,6 +26,25 @@
         })
     }
 
+    // Function to handle the movement effect
+    function move(e) {
+        const event = e.type === 'touchmove' ? e.touches[0] : e; // Handle touch event
+        this.querySelectorAll('.move').forEach(layer => {
+            const speed = layer.getAttribute('data-speed');
+
+            const x = (window.innerWidth - event.pageX * speed) / 120;
+            const y = (window.innerHeight - event.pageY * speed) / 120;
+
+            layer.style.transform = `translateX(${x}px) translateY(${y}px)`;
+        });
+    }
+
+    // Event listeners for both mouse and touch events
+    document.addEventListener('mousemove', move);
+    document.addEventListener('touchmove', move, { passive: true }); // Use passive event listener for touch
+
+
+
     /*===== GSAP ANIMATION =====*/
     // NAV
     gsap.from('.nav__logo, .nav__toggle', {opacity: 0, duration: 1, delay:2, y: 10})
